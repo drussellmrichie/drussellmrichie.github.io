@@ -1,163 +1,341 @@
 <!DOCTYPE html>
-<html>
-
-<style>
-  p.small {
-    line-height: 1;
-  }
-
-  /* p.big {
-    line-height: 1.8;
-  } */
-
-</style>
-
+<html lang="en">
 <head>
-  <title>Russell Richie, Associate Director, Home</title>
-  <!-- <link rel="icon" href="https://image.flaticon.com/icons/svg/100/100507.svg"> -->
-  <link rel="icon" href="images/psi.png">
-</head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Russell Richie</title>
+  <style>
+    :root {
+      --ink: #1a1a1a;
+      --muted: #555;
+      --accent: #2a5c3f;
+      --accent-light: #e8f0eb;
+      --border: #ddd;
+      --bg: #fafaf8;
+      --max: 720px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 17px; line-height: 1.7;
+      color: var(--ink); background: var(--bg);
+    }
+    a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+    a:hover { text-decoration: none; }
 
+    header { border-bottom: 2px solid var(--ink); padding: 2rem 1.5rem 1.5rem; }
+    header .inner {
+      max-width: var(--max); margin: 0 auto;
+      display: flex; align-items: flex-start; gap: 2rem;
+    }
+    header img {
+      width: 110px; height: 110px; border-radius: 50%;
+      object-fit: cover; flex-shrink: 0; border: 2px solid var(--border);
+    }
+    header .nameblock h1 { font-size: 2rem; font-weight: normal; letter-spacing: -0.5px; }
+    header .nameblock .title { color: var(--muted); font-size: 0.95rem; margin-top: 0.25rem; }
+    header .nameblock .email { font-size: 0.9rem; margin-top: 0.4rem; }
+
+    nav { background: var(--ink); padding: 0 1.5rem; }
+    nav ul { max-width: var(--max); margin: 0 auto; list-style: none; display: flex; }
+    nav ul li a {
+      display: block; color: #fff; text-decoration: none; padding: 0.7rem 1rem;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.88rem; letter-spacing: 0.04em; text-transform: uppercase;
+      opacity: 0.8; transition: opacity 0.15s;
+    }
+    nav ul li a:hover { opacity: 1; }
+
+    main { max-width: var(--max); margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+    section { margin-bottom: 3.5rem; }
+    section:last-child { margin-bottom: 0; }
+
+    h2 {
+      font-size: 1rem; font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--accent); border-bottom: 1px solid var(--border);
+      padding-bottom: 0.4rem; margin-bottom: 1.25rem;
+    }
+    h3 {
+      font-size: 0.78rem; font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 700; color: var(--muted); margin: 2rem 0 0.75rem;
+      text-transform: uppercase; letter-spacing: 0.06em;
+    }
+    p { margin-bottom: 1rem; }
+    p:last-child { margin-bottom: 0; }
+
+    .papers { list-style: none; }
+    .papers li { padding: 0.85rem 0; border-bottom: 1px solid var(--border); font-size: 0.94rem; }
+    .papers li:first-child { border-top: 1px solid var(--border); }
+    .papers .venue { color: var(--muted); font-size: 0.88rem; margin-top: 0.15rem; }
+    .papers .tag {
+      display: inline-block; font-size: 0.7rem;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background: var(--accent-light); color: var(--accent); border-radius: 3px;
+      padding: 0.1em 0.45em; margin-left: 0.35em; vertical-align: middle;
+      text-transform: uppercase; letter-spacing: 0.04em;
+    }
+
+    .writing { list-style: none; }
+    .writing li { padding: 0.85rem 0; border-bottom: 1px solid var(--border); }
+    .writing li:first-child { border-top: 1px solid var(--border); }
+    .writing .meta {
+      font-size: 0.84rem; color: var(--muted);
+      font-family: 'Helvetica Neue', Arial, sans-serif; margin-top: 0.15rem;
+    }
+    .writing .desc { font-size: 0.91rem; color: var(--muted); margin-top: 0.3rem; }
+
+    .links { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+    .links a {
+      font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 0.88rem;
+      padding: 0.35rem 0.8rem; border: 1px solid var(--accent); border-radius: 3px;
+      text-decoration: none; color: var(--accent); transition: background 0.15s, color 0.15s;
+    }
+    .links a:hover { background: var(--accent); color: #fff; }
+
+    @media (max-width: 540px) {
+      header .inner { flex-direction: column; gap: 1rem; }
+      header .nameblock h1 { font-size: 1.6rem; }
+      nav ul { flex-wrap: wrap; }
+    }
+  </style>
+</head>
 <body>
 
-<!--   <img class="img-responsive" src="images/cropped-russellrichieheadshot.png" alt="Russell Richie headshot" width="250"/> -->
-  <img class="img-responsive" src="images/headshot_resize.jpg" alt="Russell Richie headshot" width="250"/>
-
-  <h1>Russell Richie</h1>
-
-  Associate Director<br>
-  Cognitive Science and MindCORE<br>
-  University of Pennsylvania<br>
-  Penn e-mail: drrichie@sas.upenn.edu<br>
-  Penn COGS major/minor advising: cogs-ad@sas.upenn.edu<br>
-  Office: Goddard 201<br>
-  Personal e-mail: drussellmrichie@gmail.com
-
-  <h2 style="text-align:left;">COGS matters</h2>
-
-  <p><b>COGS majors/minors and prospective majors/minors, if you have questions about major and minor requirements, independent study and honors thesis, study abroad, CPT, or similar matters, 
-    please make sure you have read through our policies <a href="https://web.sas.upenn.edu/cogsci/">here</a> before seeking advising through email or a meeting.</b></p>
-  
-  <p>If you are trying to enroll in COGS1001 but the class is full, please read <a href="https://web.sas.upenn.edu/cogsci/frequently-asked-questions/">this</a> first before emailing COGS program manager Jessica Marcus (jmarcus@sas.upenn.edu) about enrolling.</p>
-  
-  <p>If you are a COGS major/minor or a student in COGS1001 trying to meet with me, and my office hours below do not work for you (please try these first!), you can find a time to meet with me <a href="https://calendly.com/drussellmrichie/30min">here</a>.</p>
-  
-  <p>If you need to correspond with me about COGS advising (e.g., majoring/minoring in COGS), please use cogs-ad@sas.upenn.edu rather than my personal or Penn emails.</p>
-
-  <p>If you want me to write a (good!) letter of rec for you, we should have had more interaction than simply taking COGS 1001 with me. For example, if you took COGS 1001 with me, <i>and</i> you came to my office hours regularly, <i>and</i> you are my major advisee, then I can potentially write you a letter.</p>
-  
-  <p>My <a href="https://meet.google.com/hpw-cuad-mqx">Google Meet</a> room.</p>
-
-  <!-- <p>Fall 2025 office hours<p>
-  <i>COGS 1001</i></br>
-  In person: Tuesday 9:30am to 11am in Goddard 203.</br> 
-  Virtual: Wednesday 10:00am to 11:30am on <a href="https://upenn.zoom.us/j/3505823785?pwd=QUU4b0JnM0xLRTZYNytzQVVhMHNwUT09">Zoom</a>.</br> -->
-
-  <!-- <i>COGS Major Advising</i></br>
-  In person: Friday 1:30pm to 2:30pm in Goddard 203.</br> 
-  Also by appointment.</br> -->
-   
-  <p><b>Spring 2026 COGS undergraduate advising office hours: Friday 1:30pm to 2:30pm in Goddard 201</b><p>
-
-<!-- <p>Summer 2025 COGS undergraduate advising office hours are ad hoc. Please ue my <a href="https://calendly.com/drussellmrichie/30min">Calendly link</a> to schedule.<p> -->
-  
-  <h2 style="text-align:left;">Bio</h2>
-  
-  <p>I am the Associate Director of <a href="https://web.sas.upenn.edu/cogsci/">Cognitive Science</a> and <a href="https://mindcore.sas.upenn.edu/">MindCORE</a> at the University of Pennsylvania.
-    Previously (2021-2022), I was a a data scientist in the <a href="https://www.research.chop.edu/tsui-laboratory">Tsui Lab</a> at the <a href="https://www.chop.edu/">Children's Hospital of Philadelphia</a>.
-    Before that, (2018-2021) I was a post-doc with <a href="https://www.sas.upenn.edu/~bhatiasu/">Sudeep Bhatia</a> in the 
-    <a href="https://web.sas.upenn.edu/cbs-lab/">Computational Behavioral Science Lab</a> of the Department of Psychology at the University of Pennsylvania. 
-    In 2017, I received my PhD in <a href="http://devpsych.uconn.edu/" rel="nofollow">Developmental Psychology</a> at the <a href="http://uconn.edu/" rel="nofollow">University of Connecticut</a>. There I primarily worked in the 
-    <a href="http://languagecreationlab.uconn.edu/" target="_blank" rel="nofollow noopener">Language Creation Lab</a> under the mentorship of 
-    <a href="https://psych.uconn.edu/faculty/marie-coppola/" rel="nofollow">Marie Coppola</a>, and in the 
-    <a href="https://wp.solab.uconn.edu/">SoLab</a> under <a href="https://psych.uconn.edu/faculty/whit-tabor/">Whit Tabor</a>. I was also a fellow in the 
-    <a href="http://nbl.cogsci.uconn.edu" rel="nofollow">Language Plasticity -- Genes, Brain, Cognition, & Computation IGERT</a> (which is now the Neurobiology of Language program),
-    and an affiliate of the <a href="http://ibacs.uconn.edu/">CT Institute for the Brain and Cognitive Sciences</a>.</p>
-
-  <p>My interests and work have changed a lot over the years, but the common thread is computation. I love writing computer programs to analyze problems, whether they're in cognitive science, 
-    medicine, urban studies, or whatever else grabs my interest. See my papers below for more!</p>
-  
-<!--   <p>My interests include cognitive science in general, and language and memory in particular. Most of my recent work (circa 2020) concerns (a) semantic representations of words (and sometimes sentences) obtained through psychometric or natural language processing techniques, and (b) the judgments and decisions people make based on those representations. Previously, I've been interested in representation and processing of prosodic information, as well as the emergence of language and particularly conventional referring expressions (what we might roughly call 'the lexicon'). Over the years, my research has involved natural language processing, computational modeling, and behavioral studies in the lab, the field, and online.</p> -->
-
-  <!-- <p>My <a href="http://russellrichie.files.wordpress.com/2014/03/richie-masters_final.pdf">master's thesis</a> examined conventionalization of lexicons, using naturalistic data from Nicaraguan homesign systems and Nicaraguan Sign Language, and an agent-based computational model. You can find a video of me describing the work <a href="http://vimeo.com/65204947">here</a> (made for the 2013 IGERT Poster and Video competition). For my dissertation, I examined conventionalization and reduction of referring expressions, using experimental data from a charades-like task, and agent-based models extended from my master's.</p> -->
-
-  <p>Here's a link to my <a title="richie-vita" href="files/richie_vita.pdf">vita.</a></p>
-
-  <h2 style="text-align:left;">Papers</h2>
-
-  <div style="padding-left: 4em; text-indent: -4em;">
- 
-    <p><strong>Richie, R.</strong>, Miller, G., Hoskins, S., Faas, J. (in prep). Challenges and opportunities in messaging land value tax.</p>
-
-    <p><strong>Richie, R.</strong> (in prep). Land values can be estimated more accurately than property values in parameter recovery simulations. <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5259481">Preprint.</a> Accepted for presentation at the 2025 North American Meeting of the Regional Science Association International.</p>
-
-    <p>Han, S., <strong>Richie, R.</strong>, Shi, L., Tsui, F.R. (2024). <a href="https://ieeexplore.ieee.org/document/10597426">Automated Matchmaking of Researcher Biosketches and Funder Requests for Proposals using Deep Neural Networks</a>. <i>IEEE Access : Practical Innovations, Open Solutions</i>, 12, 98096–98106. https://doi.org/10.1109/ACCESS.2024.3427631</p>
-    
-    <p><strong>Richie, R.</strong>. (unpublished manuscript). <a href="https://github.com/drussellmrichie/drussellmrichie.github.io/blob/master/files/richie_musa650_final_project_final_report.docx">Using aerial parcel imagery to predict single family home sale prices</a>. <i>This is the final paper I wrote for MUSA 6500: Remote Sensing in Spring 2024.</i></p>
-    
-    <p><strong>Richie, R.</strong>, Ajmal, N.*, & Hebart, M. (2024). <a href="https://escholarship.org/content/qt87n5h98z/qt87n5h98z_noSplash_f3c73245b47ae30262952007f900f4b2.pdf">Unrealized promise of joint modeling of choice and reaction time in improving representation learning.</a> <i>46th Annual Meeting of the Cognitive Science Society.</i> <i>*Student collaborator</i></p>
-
-    <p>He, L.*, <strong>Richie, R.*</strong>, & Bhatia, S. (2024). <a href="https://awspntest.apa.org/doiLanding?doi=10.1037%2Fxge0001558">Limitations to optimal search in naturalistic active learning</a>. <i>Journal of Experimental Psychology: General.</i>, 153(5), 1165-1188. <i>*Equal contribution</i></p>
-
-    <p><strong>Richie, R.*</strong>, Ruiz, V.*, Han, S., Shi, L., Tsui, F.R. (2023). 
-      <a href="https://academic.oup.com/jamia/advance-article/doi/10.1093/jamia/ocad046/7099518#no-access-message">Extracting social determinants of health events with transformer-based multitask, multilabel named entity recognition. </a>
-      <i>Journal of the American Medical Informatics Association</i>. <i>*Equal contribution</i> 
-      <it>This work was done as part of the <a href="https://n2c2.dbmi.hms.harvard.edu/2022-track-2">2022 n2c2 Track 2 shared task</a>. We ranked in the top 25% for all subtasks, within .02 F1 from 1st place in all subtasks.</it></p>
-       
-    <p>Han, S., Shi, L., <strong>Richie, R.</strong>, Tsui, F.R. (2022). 
-      <a href="https://www.sciencedirect.com/science/article/pii/S0020025522011537">Building Siamese attention-augmented-recurrent convolutional neural networks for document similarity scoring.</a> 
-      <i>Information Sciences, 615</i>, 90-102.<p>
-
-    <p><strong>Richie, R.</strong>, Aka, A., & Bhatia, S. (2022). 
-      <a href="https://psycnet.apa.org/record/2023-06125-001">Free association in bidirectional memory networks</a>. 
-      <i>Psychological Review</i>.</p>    
-    
-    <p>Bhatia, S., & <strong>Richie, R.</strong> (2022). Transformer networks of human concept knowledge. <i>Psychological Review.</i> <a href="https://psyarxiv.com/hs4ra/" target="_blank" rel="noopener">PsyArXiv preprint.</a></p>
-
-    <p><strong>Richie., R.</strong>, Grover, S., Tsui, F.R. (2022). Inter-annotator agreement is not the ceiling of machine learning performance: Evidence from a comprehensive set of simulations. In <i>Proceedings of the 21st Workshop on Biomedical Language Processing</i> (pp. 275–284). Association for Computational Linguistics. <a href="https://github.com/drussellmrichie/drussellmrichie.github.io/blob/master/files/IAA_ML_BioNLP_2022_camera-ready.pdf" target="_blank" rel="noopener">Preprint<a/></p>
-
-    <p>Han, S., Zhang, R.F., Shi, L., <strong>Richie, R.</strong>, Liu, H., Tseng, A., Quan, W., Ryan, N., Brent, D., & Tsui, F.R. (2022). <a href="https://www.sciencedirect.com/science/article/pii/S1532046421003130?via%3Dihub">Classifying social determinants of health from unstructured electronic health records using deep learning-based natural language processing</a>. <i>Journal of Biomedical Informatics</i>, 103984.<p>
-
-    <p>Singh, M.*, <strong>Richie, R.*</strong>, & Bhatia, S. (2022). Representing and predicting everyday behavior. <i>Computational Brain & Behavior, 5.</i>(1), 1-21.<a href="https://psyarxiv.com/kb53h/" target="_blank" rel="noopener">PsyArXiv preprint.</a> <i>*Equal contribution</i></p>
-    
-    <p>Zhao, W.J., <strong>Richie, R.</strong>, & Bhatia, S. (2022). Process and content in decisions from memory. <i>Psychological Review, 129</i>(1), 73–106. <a href="https://psyarxiv.com/nwxs2" target="_blank" rel="noopener">PsyArXiv preprint</a></p>
-
-    <p><strong>Richie, R.</strong>, & Bhatia, S. (2022). Knowledge in everyday judgment and decision making: An introduction to the distributed semantics approach. In R. Boyd & M. Dehghani (Eds.) <i>The Atlas of Language Analysis in Psychology.</i> Guilford Press. <a href="https://psyarxiv.com/mc5da/" target="_blank" rel="noopener">PsyArXiv preprint.</a></p>
-
-    <p><strong>Richie, R.</strong>, & Bhatia, S. (2021). Similarity judgment within and across categories: A comprehensive model comparison. <i>Cognitive Science, 45</i>(8), e13030 <a href="https://psyarxiv.com/5pa9r/" target="_blank" rel="noopener">PsyArXiv preprint.</a></p>
-
-    <p><strong>Richie, R.</strong>, & Verheyen, S. (2020). Using cross-validation to select dimensionality in multidimensional scaling. <a href="https://repub.eur.nl/pub/128988/ICCM2020.pdf" target="_blank" rel="noopener">ICCM extended abstract.</a></p>
-
-    <p><strong>Richie, R.*, </strong>Hall, M.*, Cho, P.W., & Coppola, M. (2020). Converging evidence: Enhanced conventionalization of gestural referring expressions in richly-connected networks. <i>Language Dynamics and Change, 10</i>(2), 259-290. <a href="https://psyarxiv.com/pdj9n" target="_blank" rel="noopener">PsyArXiv preprint.</a> <i>*Equal contribution</i></p>
-
-    <p><strong>Richie, R.</strong>, White, B., Hout, M.C., & Bhatia, S. (2020). <a href="https://link.springer.com/article/10.3758/s13428-020-01362-y" target="_blank" rel="noopener">The spatial arrangement method of measuring similarity can capture high-dimensional, semantic structures.</a> <i>Behavior Research Methods, 52</i>, 1906–1928. <a href="https://psyarxiv.com/qm27p" target="_blank" rel="noopener">PsyArXiv preprint</a>.</p>
-
-    <p>Giovannone, N., Fitzroy, A. B., <strong>Richie, R.</strong>, Jasińska, K., Wood, S., Landi, N., Coppola, M. & Breen, M. (unpublished). Prosodic phrase boundary processing in native signers of American Sign Language. <a href="https://osf.io/sjkxy/" target="_blank" rel="noopener">Slides from ETAP 2019.</a></p>
-
-    <p><strong>Richie, R.</strong>, Zou, W., & Bhatia, S, (2019). <a href="http://doi.org/10.1525/collabra.282" target="_blank" rel="noopener">Predicting High-Level Human Judgment Across Diverse Behavioral Domains.</a> <i>Collabra: Psychology, 5</i>(1), 50. <a href="https://psyarxiv.com/g9j83" target="_blank" rel="noopener">PsyArXiv preprint</a>.<p>
-
-    <p>Bhatia, S., <strong>Richie, R.</strong>, & Zou, W. (2019). <a href="https://www.sas.upenn.edu/~bhatiasu/Bhatia%20et%20al%202019%20COBS.pdf" target="_blank" rel="noopener">Distributed semantic representations for modeling human judgment.</a> <em>Current Opinion in Behavioral Sciences</em>, 29, 31-36.</p>
-
-    <p><strong>Richie, R.</strong> (2016). <a href="https://benjamins.com/#catalog/journals/ml.11.3.05ric/details" target="_blank" rel="noopener">Functionalism in the lexicon: Where is it, and how did it get there?</a> In G. Jarema, G. Libben, & V. Kuperman (Eds.), Thematic Issue of <em>The Mental Lexicon</em><em>: New Questions for the Next Decade</em>, <em>11</em>(3), 429–466. Amsterdam: John Benjamins. doi 10.1075/ml.11.3.05ric. <a href="https://osf.io/preprints/psyarxiv/xuzvd">PsyArXiv preprint</a>.</p>
-
-    <p><strong>Richie, R</strong>., Yang, C., & Coppola, M. (2014). <a href="https://russellrichie.files.wordpress.com/2016/10/richie-yang-coppola-topics-final.docx">Modeling the emergence of natural language lexicons in homesign systems</a>. <em>Topics in Cognitive Science, 6</em>(1), 183-195.</p>
-
-    <p>Roseberry, S., <strong>Richie, R.</strong>, Hirsh-Pasek, K., Golinkoff, R.M., Shipley, T. (2011). <a href="https://journals.sagepub.com/doi/full/10.1177/0956797611422074?casa_token=oZRQE561jUIAAAAA:euyz91RKiZsKU7CA5S5gzJSPSdC85bRW8Wy2FOpc5d8KBeK7FOs08XZ8a_euoevGoM4JamoWRVdY">Babies catch a break: 7- to 9-month-olds track transitional probabilities in continuous dynamic events</a>. <em>Psychological Science, 22</em>(11), 1422-1424.</p>
-
+<header>
+  <div class="inner">
+    <img src="images/headshot_resize.jpg" alt="Russell Richie" />
+    <div class="nameblock">
+      <h1>Russell Richie</h1>
+      <div class="title">
+        Director of Strategy and Content, Progress and Poverty Institute<br>
+        Steering Committee, 5th Square Advocacy
+      </div>
+      <div class="email"><a href="mailto:drussellmrichie@gmail.com">drussellmrichie@gmail.com</a></div>
+    </div>
   </div>
-  <h2 style="text-align:left;">Me elsewhere</h2>
+</header>
 
+<nav>
   <ul>
-  	<li><a href="https://github.com/drussellmrichie">Github </a></li>
-  	<li><a href="https://www.linkedin.com/in/russellrichie">LinkedIn</a></li>
-  	<li><a href="https://scholar.google.com/citations?user=TvehFh4AAAAJ&hl=en">Google Scholar</a></li>
-<!--   	<li><a href="https://twitter.com/drussellmrichie">Twitter</a></li> -->
-    <li><a href="https://bsky.app/profile/drussellmrichie.bsky.social">Bluesky</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#research">Research</a></li>
+    <li><a href="#writing">Writing</a></li>
+    <li><a href="#connect">Connect</a></li>
   </ul>
+</nav>
 
-  <p>I am on the steering committee for <a href="https://www.5thsq.org/">5th Square</a>, Philadelphia's urbanist PAC. Check them out if you want to make Philadelphia more sustainable, equitable, and accessible.</p>
-  <p>I am also Vice President of the board of <a href="https://https://schalkenbach.org//">The Progress and Poverty Institute</a>, a foundation dedicated to promoting fair and efficient (re)distribution of land and other natural resources. Check us out if you are interested in a more just and productive society!</p>
-  
-  <a href='cats.html'>Our cats</a>
+<main>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>
+      I am Director of Strategy and Content at the
+      <a href="https://schalkenbach.org/">Progress and Poverty Institute</a>,
+      where I lead strategic planning, fundraising, and research in support of
+      land value taxation and Georgist political economy. I also serve on the
+      steering committee of <a href="https://www.5thsq.org/">5th Square Advocacy</a>,
+      Philadelphia's urbanist advocacy organization focused on housing, transit,
+      and street safety.
+    </p>
+    <p>
+      My research centers on land economics and urban policy — particularly the
+      measurement of land values, the fiscal and distributional effects of land
+      value taxation, and how Georgist ideas apply to contemporary housing and
+      transportation challenges. I bring a computational and empirical lens to
+      these questions, drawing on methods from data science, econometrics, and
+      applied machine learning.
+    </p>
+    <p>
+      Before turning to land economics, I spent a decade in cognitive and
+      behavioral science. I was Associate Director of
+      <a href="https://web.sas.upenn.edu/cogsci/">Cognitive Science</a> and
+      <a href="https://mindcore.sas.upenn.edu/">MindCORE</a> at the University
+      of Pennsylvania, preceded by a postdoc in the
+      <a href="https://web.sas.upenn.edu/cbs-lab/">Computational Behavioral Science Lab</a>
+      at Penn, and a stint as a data scientist at the
+      <a href="https://www.chop.edu/">Children's Hospital of Philadelphia</a>.
+      I received my PhD in Developmental Psychology from the University of Connecticut in 2017.
+    </p>
+    <p><a href="files/richie_vita.pdf">Curriculum vitae (PDF)</a></p>
+  </section>
+
+  <section id="research">
+    <h2>Research</h2>
+
+    <h3>Land Economics &amp; Urban Policy</h3>
+    <ul class="papers">
+
+      <li>
+        <div>
+          <strong>Richie, R.</strong> (in prep). Land values can be estimated more accurately
+          than property values in parameter recovery simulations.
+          <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5259481">Preprint (SSRN).</a>
+          <span class="tag">Accepted · RSAI 2025</span>
+        </div>
+      </li>
+
+      <li>
+        <div>
+          <strong>Richie, R.</strong>, Miller, G., Hoskins, S., Faas, J. (in prep).
+          Challenges and opportunities in messaging land value tax.
+        </div>
+      </li>
+
+      <li>
+        <div>
+          <strong>Richie, R.</strong> (2024).
+          <a href="https://github.com/drussellmrichie/drussellmrichie.github.io/blob/master/files/richie_musa650_final_project_final_report.docx">Using aerial parcel imagery to predict single-family home sale prices.</a>
+        </div>
+        <div class="venue">Unpublished manuscript. Final paper for MUSA 6500: Remote Sensing.</div>
+      </li>
+
+    </ul>
+
+    <h3>Cognitive &amp; Behavioral Science</h3>
+    <ul class="papers">
+
+      <li>
+        <div>Han, S., <strong>Richie, R.</strong>, Shi, L., Tsui, F.R. (2024). <a href="https://ieeexplore.ieee.org/document/10597426">Automated Matchmaking of Researcher Biosketches and Funder Requests for Proposals using Deep Neural Networks.</a></div>
+        <div class="venue"><em>IEEE Access</em>, 12, 98096–98106.</div>
+      </li>
+
+      <li>
+        <div><strong>Richie, R.</strong>, Ajmal, N.*, &amp; Hebart, M. (2024). <a href="https://escholarship.org/content/qt87n5h98z/qt87n5h98z_noSplash_f3c73245b47ae30262952007f900f4b2.pdf">Unrealized promise of joint modeling of choice and reaction time in improving representation learning.</a> *Student collaborator.</div>
+        <div class="venue"><em>46th Annual Meeting of the Cognitive Science Society.</em></div>
+      </li>
+
+      <li>
+        <div>He, L.*, <strong>Richie, R.*</strong>, &amp; Bhatia, S. (2024). <a href="https://awspntest.apa.org/doiLanding?doi=10.1037%2Fxge0001558">Limitations to optimal search in naturalistic active learning.</a> *Equal contribution.</div>
+        <div class="venue"><em>Journal of Experimental Psychology: General</em>, 153(5), 1165–1188.</div>
+      </li>
+
+      <li>
+        <div><strong>Richie, R.*</strong>, Ruiz, V.*, Han, S., Shi, L., Tsui, F.R. (2023). <a href="https://academic.oup.com/jamia/advance-article/doi/10.1093/jamia/ocad046/7099518">Extracting social determinants of health events with transformer-based multitask, multilabel named entity recognition.</a> *Equal contribution.</div>
+        <div class="venue"><em>Journal of the American Medical Informatics Association.</em></div>
+      </li>
+
+      <li>
+        <div>Han, S., Shi, L., <strong>Richie, R.</strong>, Tsui, F.R. (2022). <a href="https://www.sciencedirect.com/science/article/pii/S0020025522011537">Building Siamese attention-augmented-recurrent convolutional neural networks for document similarity scoring.</a></div>
+        <div class="venue"><em>Information Sciences</em>, 615, 90–102.</div>
+      </li>
+
+      <li>
+        <div><strong>Richie, R.</strong>, Aka, A., &amp; Bhatia, S. (2022). <a href="https://psycnet.apa.org/record/2023-06125-001">Free association in bidirectional memory networks.</a></div>
+        <div class="venue"><em>Psychological Review.</em></div>
+      </li>
+
+      <li>
+        <div>Bhatia, S., &amp; <strong>Richie, R.</strong> (2022). <a href="https://psyarxiv.com/hs4ra/">Transformer networks of human concept knowledge.</a></div>
+        <div class="venue"><em>Psychological Review.</em></div>
+      </li>
+
+      <li>
+        <div><strong>Richie, R.</strong>, Grover, S., Tsui, F.R. (2022). <a href="https://github.com/drussellmrichie/drussellmrichie.github.io/blob/master/files/IAA_ML_BioNLP_2022_camera-ready.pdf">Inter-annotator agreement is not the ceiling of machine learning performance.</a></div>
+        <div class="venue"><em>Proceedings of the 21st Workshop on Biomedical Language Processing.</em> ACL.</div>
+      </li>
+
+      <li>
+        <div>Han, S., Zhang, R.F., Shi, L., <strong>Richie, R.</strong>, et al. (2022). <a href="https://www.sciencedirect.com/science/article/pii/S1532046421003130">Classifying social determinants of health from unstructured electronic health records using deep learning-based NLP.</a></div>
+        <div class="venue"><em>Journal of Biomedical Informatics</em>, 103984.</div>
+      </li>
+
+      <li>
+        <div>Singh, M.*, <strong>Richie, R.*</strong>, &amp; Bhatia, S. (2022). <a href="https://psyarxiv.com/kb53h/">Representing and predicting everyday behavior.</a> *Equal contribution.</div>
+        <div class="venue"><em>Computational Brain &amp; Behavior</em>, 5(1), 1–21.</div>
+      </li>
+
+      <li>
+        <div>Zhao, W.J., <strong>Richie, R.</strong>, &amp; Bhatia, S. (2022). <a href="https://psyarxiv.com/nwxs2">Process and content in decisions from memory.</a></div>
+        <div class="venue"><em>Psychological Review</em>, 129(1), 73–106.</div>
+      </li>
+
+      <li>
+        <div><strong>Richie, R.</strong>, &amp; Bhatia, S. (2022). <a href="https://psyarxiv.com/mc5da/">Knowledge in everyday judgment and decision making: An introduction to the distributed semantics approach.</a></div>
+        <div class="venue">In Boyd &amp; Dehghani (Eds.), <em>The Atlas of Language Analysis in Psychology.</em> Guilford Press.</div>
+      </li>
+
+      <li>
+        <div><strong>Richie, R.</strong>, &amp; Bhatia, S. (2021). <a href="https://psyarxiv.com/5pa9r/">Similarity judgment within and across categories: A comprehensive model comparison.</a></div>
+        <div class="venue"><em>Cognitive Science</em>, 45(8), e13030.</div>
+      </li>
+
+      <li>
+        <div><strong>Richie, R.</strong>, &amp; Verheyen, S. (2020). <a href="https://repub.eur.nl/pub/128988/ICCM2020.pdf">Using cross-validation to select dimensionality in multidimensional scaling.</a></div>
+        <div class="venue"><em>ICCM 2020</em> (extended abstract).</div>
+      </li>
+
+      <li>
+        <div><strong>Richie, R.*</strong>, Hall, M.*, Cho, P.W., &amp; Coppola, M. (2020). <a href="https://psyarxiv.com/pdj9n">Converging evidence: Enhanced conventionalization of gestural referring expressions in richly-connected networks.</a> *Equal contribution.</div>
+        <div class="venue"><em>Language Dynamics and Change</em>, 10(2), 259–290.</div>
+      </li>
+
+      <li>
+        <div><strong>Richie, R.</strong>, White, B., Hout, M.C., &amp; Bhatia, S. (2020). <a href="https://link.springer.com/article/10.3758/s13428-020-01362-y">The spatial arrangement method of measuring similarity can capture high-dimensional, semantic structures.</a></div>
+        <div class="venue"><em>Behavior Research Methods</em>, 52, 1906–1928.</div>
+      </li>
+
+      <li>
+        <div><strong>Richie, R.</strong>, Zou, W., &amp; Bhatia, S. (2019). <a href="http://doi.org/10.1525/collabra.282">Predicting high-level human judgment across diverse behavioral domains.</a></div>
+        <div class="venue"><em>Collabra: Psychology</em>, 5(1), 50.</div>
+      </li>
+
+      <li>
+        <div>Bhatia, S., <strong>Richie, R.</strong>, &amp; Zou, W. (2019). <a href="https://www.sas.upenn.edu/~bhatiasu/Bhatia%20et%20al%202019%20COBS.pdf">Distributed semantic representations for modeling human judgment.</a></div>
+        <div class="venue"><em>Current Opinion in Behavioral Sciences</em>, 29, 31–36.</div>
+      </li>
+
+      <li>
+        <div><strong>Richie, R.</strong> (2016). <a href="https://benjamins.com/#catalog/journals/ml.11.3.05ric/details">Functionalism in the lexicon: Where is it, and how did it get there?</a></div>
+        <div class="venue"><em>The Mental Lexicon</em>, 11(3), 429–466.</div>
+      </li>
+
+      <li>
+        <div><strong>Richie, R.</strong>, Yang, C., &amp; Coppola, M. (2014). <a href="https://russellrichie.files.wordpress.com/2016/10/richie-yang-coppola-topics-final.docx">Modeling the emergence of natural language lexicons in homesign systems.</a></div>
+        <div class="venue"><em>Topics in Cognitive Science</em>, 6(1), 183–195.</div>
+      </li>
+
+      <li>
+        <div>Roseberry, S., <strong>Richie, R.</strong>, Hirsh-Pasek, K., Golinkoff, R.M., &amp; Shipley, T. (2011). <a href="https://journals.sagepub.com/doi/full/10.1177/0956797611422074">Babies catch a break: 7- to 9-month-olds track transitional probabilities in continuous dynamic events.</a></div>
+        <div class="venue"><em>Psychological Science</em>, 22(11), 1422–1424.</div>
+      </li>
+
+    </ul>
+  </section>
+
+  <section id="writing">
+    <h2>Writing</h2>
+    <ul class="writing">
+
+      <li>
+        <div><a href="https://progressandpoverty.substack.com/p/mayor-elect-zohran-mamdani-champion">Mayor-elect Zohran Mamdani, Champion of the Landless</a></div>
+        <div class="meta">Progress &amp; Poverty · November 2025</div>
+        <div class="desc">On the parallels between Mamdani's mayoral campaign and Henry George's 1886 run, and what his victory means for land tax politics in New York.</div>
+      </li>
+
+      <li>
+        <div><a href="https://progressandpoverty.substack.com/p/a-georgists-reflections-on-yimbytown">A Georgist's Reflections on YIMBYtown</a></div>
+        <div class="meta">Progress &amp; Poverty · October 2025</div>
+        <div class="desc">Why land value taxation and congestion pricing remain underrepresented in the pro-housing movement, and what message-testing research can offer.</div>
+      </li>
+
+    </ul>
+  </section>
+
+  <section id="connect">
+    <h2>Connect</h2>
+    <p style="margin-bottom:1rem;">
+      The best way to reach me is by email: <a href="mailto:drussellmrichie@gmail.com">drussellmrichie@gmail.com</a>
+    </p>
+    <div class="links">
+      <a href="https://www.linkedin.com/in/russellrichie">LinkedIn</a>
+      <a href="https://bsky.app/profile/drussellmrichie.bsky.social">Bluesky</a>
+      <a href="https://github.com/drussellmrichie">GitHub</a>
+      <a href="https://scholar.google.com/citations?user=TvehFh4AAAAJ&hl=en">Google Scholar</a>
+      <a href="files/richie_vita.pdf">CV (PDF)</a>
+    </div>
+  </section>
+
+</main>
 </body>
 </html>
