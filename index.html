@@ -14,6 +14,21 @@
       --bg: #fafaf8;
       --max: 720px;
     }
+
+     @media (prefers-color-scheme: dark) {
+      :root {
+        --ink: #e8e6e0;
+        --muted: #9a9690;
+        --accent: #6dbf8a;
+        --accent-light: #1a2e22;
+        --border: #333;
+        --bg: #1a1a18;
+      }
+    
+      header { border-bottom-color: var(--ink); }
+      nav { background: #111110; }
+      nav ul li a { color: #e8e6e0; }
+    }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: Georgia, 'Times New Roman', serif;
