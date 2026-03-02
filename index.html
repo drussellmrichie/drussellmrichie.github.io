@@ -29,6 +29,25 @@
       nav { background: #111110 !important; }
       nav ul li a { color: #e8e6e0; }
     }
+    details summary {
+      cursor: pointer;
+      font-size: 0.78rem;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 700;
+      color: var(--muted);
+      margin: 2rem 0 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      list-style: none;
+    }
+    details summary::-webkit-details-marker { display: none; }
+    details summary::after {
+      content: ' ▸';
+      font-size: 0.7rem;
+    }
+    details[open] summary::after {
+      content: ' ▾';
+    }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: Georgia, 'Times New Roman', serif;
@@ -207,115 +226,117 @@
 
     </ul>
 
-    <h3>Cognitive &amp; Behavioral Science</h3>
-    <ul class="papers">
-
-      <li>
-        <div>Han, S., <strong>Richie, R.</strong>, Shi, L., Tsui, F.R. (2024). <a href="https://ieeexplore.ieee.org/document/10597426">Automated Matchmaking of Researcher Biosketches and Funder Requests for Proposals using Deep Neural Networks.</a></div>
-        <div class="venue"><em>IEEE Access</em>, 12, 98096–98106.</div>
-      </li>
-
-      <li>
-        <div><strong>Richie, R.</strong>, Ajmal, N.*, &amp; Hebart, M. (2024). <a href="https://escholarship.org/content/qt87n5h98z/qt87n5h98z_noSplash_f3c73245b47ae30262952007f900f4b2.pdf">Unrealized promise of joint modeling of choice and reaction time in improving representation learning.</a> *Student collaborator.</div>
-        <div class="venue"><em>46th Annual Meeting of the Cognitive Science Society.</em></div>
-      </li>
-
-      <li>
-        <div>He, L.*, <strong>Richie, R.*</strong>, &amp; Bhatia, S. (2024). <a href="https://awspntest.apa.org/doiLanding?doi=10.1037%2Fxge0001558">Limitations to optimal search in naturalistic active learning.</a> *Equal contribution.</div>
-        <div class="venue"><em>Journal of Experimental Psychology: General</em>, 153(5), 1165–1188.</div>
-      </li>
-
-      <li>
-        <div><strong>Richie, R.*</strong>, Ruiz, V.*, Han, S., Shi, L., Tsui, F.R. (2023). <a href="https://academic.oup.com/jamia/advance-article/doi/10.1093/jamia/ocad046/7099518">Extracting social determinants of health events with transformer-based multitask, multilabel named entity recognition.</a> *Equal contribution.</div>
-        <div class="venue"><em>Journal of the American Medical Informatics Association.</em></div>
-      </li>
-
-      <li>
-        <div>Han, S., Shi, L., <strong>Richie, R.</strong>, Tsui, F.R. (2022). <a href="https://www.sciencedirect.com/science/article/pii/S0020025522011537">Building Siamese attention-augmented-recurrent convolutional neural networks for document similarity scoring.</a></div>
-        <div class="venue"><em>Information Sciences</em>, 615, 90–102.</div>
-      </li>
-
-      <li>
-        <div><strong>Richie, R.</strong>, Aka, A., &amp; Bhatia, S. (2022). <a href="https://psycnet.apa.org/record/2023-06125-001">Free association in bidirectional memory networks.</a></div>
-        <div class="venue"><em>Psychological Review.</em></div>
-      </li>
-
-      <li>
-        <div>Bhatia, S., &amp; <strong>Richie, R.</strong> (2022). <a href="https://psyarxiv.com/hs4ra/">Transformer networks of human concept knowledge.</a></div>
-        <div class="venue"><em>Psychological Review.</em></div>
-      </li>
-
-      <li>
-        <div><strong>Richie, R.</strong>, Grover, S., Tsui, F.R. (2022). <a href="https://github.com/drussellmrichie/drussellmrichie.github.io/blob/master/files/IAA_ML_BioNLP_2022_camera-ready.pdf">Inter-annotator agreement is not the ceiling of machine learning performance.</a></div>
-        <div class="venue"><em>Proceedings of the 21st Workshop on Biomedical Language Processing.</em> ACL.</div>
-      </li>
-
-      <li>
-        <div>Han, S., Zhang, R.F., Shi, L., <strong>Richie, R.</strong>, et al. (2022). <a href="https://www.sciencedirect.com/science/article/pii/S1532046421003130">Classifying social determinants of health from unstructured electronic health records using deep learning-based NLP.</a></div>
-        <div class="venue"><em>Journal of Biomedical Informatics</em>, 103984.</div>
-      </li>
-
-      <li>
-        <div>Singh, M.*, <strong>Richie, R.*</strong>, &amp; Bhatia, S. (2022). <a href="https://psyarxiv.com/kb53h/">Representing and predicting everyday behavior.</a> *Equal contribution.</div>
-        <div class="venue"><em>Computational Brain &amp; Behavior</em>, 5(1), 1–21.</div>
-      </li>
-
-      <li>
-        <div>Zhao, W.J., <strong>Richie, R.</strong>, &amp; Bhatia, S. (2022). <a href="https://psyarxiv.com/nwxs2">Process and content in decisions from memory.</a></div>
-        <div class="venue"><em>Psychological Review</em>, 129(1), 73–106.</div>
-      </li>
-
-      <li>
-        <div><strong>Richie, R.</strong>, &amp; Bhatia, S. (2022). <a href="https://psyarxiv.com/mc5da/">Knowledge in everyday judgment and decision making: An introduction to the distributed semantics approach.</a></div>
-        <div class="venue">In Boyd &amp; Dehghani (Eds.), <em>The Atlas of Language Analysis in Psychology.</em> Guilford Press.</div>
-      </li>
-
-      <li>
-        <div><strong>Richie, R.</strong>, &amp; Bhatia, S. (2021). <a href="https://psyarxiv.com/5pa9r/">Similarity judgment within and across categories: A comprehensive model comparison.</a></div>
-        <div class="venue"><em>Cognitive Science</em>, 45(8), e13030.</div>
-      </li>
-
-      <li>
-        <div><strong>Richie, R.</strong>, &amp; Verheyen, S. (2020). <a href="https://repub.eur.nl/pub/128988/ICCM2020.pdf">Using cross-validation to select dimensionality in multidimensional scaling.</a></div>
-        <div class="venue"><em>ICCM 2020</em> (extended abstract).</div>
-      </li>
-
-      <li>
-        <div><strong>Richie, R.*</strong>, Hall, M.*, Cho, P.W., &amp; Coppola, M. (2020). <a href="https://psyarxiv.com/pdj9n">Converging evidence: Enhanced conventionalization of gestural referring expressions in richly-connected networks.</a> *Equal contribution.</div>
-        <div class="venue"><em>Language Dynamics and Change</em>, 10(2), 259–290.</div>
-      </li>
-
-      <li>
-        <div><strong>Richie, R.</strong>, White, B., Hout, M.C., &amp; Bhatia, S. (2020). <a href="https://link.springer.com/article/10.3758/s13428-020-01362-y">The spatial arrangement method of measuring similarity can capture high-dimensional, semantic structures.</a></div>
-        <div class="venue"><em>Behavior Research Methods</em>, 52, 1906–1928.</div>
-      </li>
-
-      <li>
-        <div><strong>Richie, R.</strong>, Zou, W., &amp; Bhatia, S. (2019). <a href="http://doi.org/10.1525/collabra.282">Predicting high-level human judgment across diverse behavioral domains.</a></div>
-        <div class="venue"><em>Collabra: Psychology</em>, 5(1), 50.</div>
-      </li>
-
-      <li>
-        <div>Bhatia, S., <strong>Richie, R.</strong>, &amp; Zou, W. (2019). <a href="https://www.sas.upenn.edu/~bhatiasu/Bhatia%20et%20al%202019%20COBS.pdf">Distributed semantic representations for modeling human judgment.</a></div>
-        <div class="venue"><em>Current Opinion in Behavioral Sciences</em>, 29, 31–36.</div>
-      </li>
-
-      <li>
-        <div><strong>Richie, R.</strong> (2016). <a href="https://benjamins.com/#catalog/journals/ml.11.3.05ric/details">Functionalism in the lexicon: Where is it, and how did it get there?</a></div>
-        <div class="venue"><em>The Mental Lexicon</em>, 11(3), 429–466.</div>
-      </li>
-
-      <li>
-        <div><strong>Richie, R.</strong>, Yang, C., &amp; Coppola, M. (2014). <a href="https://russellrichie.files.wordpress.com/2016/10/richie-yang-coppola-topics-final.docx">Modeling the emergence of natural language lexicons in homesign systems.</a></div>
-        <div class="venue"><em>Topics in Cognitive Science</em>, 6(1), 183–195.</div>
-      </li>
-
-      <li>
-        <div>Roseberry, S., <strong>Richie, R.</strong>, Hirsh-Pasek, K., Golinkoff, R.M., &amp; Shipley, T. (2011). <a href="https://journals.sagepub.com/doi/full/10.1177/0956797611422074">Babies catch a break: 7- to 9-month-olds track transitional probabilities in continuous dynamic events.</a></div>
-        <div class="venue"><em>Psychological Science</em>, 22(11), 1422–1424.</div>
-      </li>
-
-    </ul>
+    <details>
+      <summary>Cognitive &amp; Behavioral Science</summary>
+      <ul class="papers">
+  
+        <li>
+          <div>Han, S., <strong>Richie, R.</strong>, Shi, L., Tsui, F.R. (2024). <a href="https://ieeexplore.ieee.org/document/10597426">Automated Matchmaking of Researcher Biosketches and Funder Requests for Proposals using Deep Neural Networks.</a></div>
+          <div class="venue"><em>IEEE Access</em>, 12, 98096–98106.</div>
+        </li>
+  
+        <li>
+          <div><strong>Richie, R.</strong>, Ajmal, N.*, &amp; Hebart, M. (2024). <a href="https://escholarship.org/content/qt87n5h98z/qt87n5h98z_noSplash_f3c73245b47ae30262952007f900f4b2.pdf">Unrealized promise of joint modeling of choice and reaction time in improving representation learning.</a> *Student collaborator.</div>
+          <div class="venue"><em>46th Annual Meeting of the Cognitive Science Society.</em></div>
+        </li>
+  
+        <li>
+          <div>He, L.*, <strong>Richie, R.*</strong>, &amp; Bhatia, S. (2024). <a href="https://awspntest.apa.org/doiLanding?doi=10.1037%2Fxge0001558">Limitations to optimal search in naturalistic active learning.</a> *Equal contribution.</div>
+          <div class="venue"><em>Journal of Experimental Psychology: General</em>, 153(5), 1165–1188.</div>
+        </li>
+  
+        <li>
+          <div><strong>Richie, R.*</strong>, Ruiz, V.*, Han, S., Shi, L., Tsui, F.R. (2023). <a href="https://academic.oup.com/jamia/advance-article/doi/10.1093/jamia/ocad046/7099518">Extracting social determinants of health events with transformer-based multitask, multilabel named entity recognition.</a> *Equal contribution.</div>
+          <div class="venue"><em>Journal of the American Medical Informatics Association.</em></div>
+        </li>
+  
+        <li>
+          <div>Han, S., Shi, L., <strong>Richie, R.</strong>, Tsui, F.R. (2022). <a href="https://www.sciencedirect.com/science/article/pii/S0020025522011537">Building Siamese attention-augmented-recurrent convolutional neural networks for document similarity scoring.</a></div>
+          <div class="venue"><em>Information Sciences</em>, 615, 90–102.</div>
+        </li>
+  
+        <li>
+          <div><strong>Richie, R.</strong>, Aka, A., &amp; Bhatia, S. (2022). <a href="https://psycnet.apa.org/record/2023-06125-001">Free association in bidirectional memory networks.</a></div>
+          <div class="venue"><em>Psychological Review.</em></div>
+        </li>
+  
+        <li>
+          <div>Bhatia, S., &amp; <strong>Richie, R.</strong> (2022). <a href="https://psyarxiv.com/hs4ra/">Transformer networks of human concept knowledge.</a></div>
+          <div class="venue"><em>Psychological Review.</em></div>
+        </li>
+  
+        <li>
+          <div><strong>Richie, R.</strong>, Grover, S., Tsui, F.R. (2022). <a href="https://github.com/drussellmrichie/drussellmrichie.github.io/blob/master/files/IAA_ML_BioNLP_2022_camera-ready.pdf">Inter-annotator agreement is not the ceiling of machine learning performance.</a></div>
+          <div class="venue"><em>Proceedings of the 21st Workshop on Biomedical Language Processing.</em> ACL.</div>
+        </li>
+  
+        <li>
+          <div>Han, S., Zhang, R.F., Shi, L., <strong>Richie, R.</strong>, et al. (2022). <a href="https://www.sciencedirect.com/science/article/pii/S1532046421003130">Classifying social determinants of health from unstructured electronic health records using deep learning-based NLP.</a></div>
+          <div class="venue"><em>Journal of Biomedical Informatics</em>, 103984.</div>
+        </li>
+  
+        <li>
+          <div>Singh, M.*, <strong>Richie, R.*</strong>, &amp; Bhatia, S. (2022). <a href="https://psyarxiv.com/kb53h/">Representing and predicting everyday behavior.</a> *Equal contribution.</div>
+          <div class="venue"><em>Computational Brain &amp; Behavior</em>, 5(1), 1–21.</div>
+        </li>
+  
+        <li>
+          <div>Zhao, W.J., <strong>Richie, R.</strong>, &amp; Bhatia, S. (2022). <a href="https://psyarxiv.com/nwxs2">Process and content in decisions from memory.</a></div>
+          <div class="venue"><em>Psychological Review</em>, 129(1), 73–106.</div>
+        </li>
+  
+        <li>
+          <div><strong>Richie, R.</strong>, &amp; Bhatia, S. (2022). <a href="https://psyarxiv.com/mc5da/">Knowledge in everyday judgment and decision making: An introduction to the distributed semantics approach.</a></div>
+          <div class="venue">In Boyd &amp; Dehghani (Eds.), <em>The Atlas of Language Analysis in Psychology.</em> Guilford Press.</div>
+        </li>
+  
+        <li>
+          <div><strong>Richie, R.</strong>, &amp; Bhatia, S. (2021). <a href="https://psyarxiv.com/5pa9r/">Similarity judgment within and across categories: A comprehensive model comparison.</a></div>
+          <div class="venue"><em>Cognitive Science</em>, 45(8), e13030.</div>
+        </li>
+  
+        <li>
+          <div><strong>Richie, R.</strong>, &amp; Verheyen, S. (2020). <a href="https://repub.eur.nl/pub/128988/ICCM2020.pdf">Using cross-validation to select dimensionality in multidimensional scaling.</a></div>
+          <div class="venue"><em>ICCM 2020</em> (extended abstract).</div>
+        </li>
+  
+        <li>
+          <div><strong>Richie, R.*</strong>, Hall, M.*, Cho, P.W., &amp; Coppola, M. (2020). <a href="https://psyarxiv.com/pdj9n">Converging evidence: Enhanced conventionalization of gestural referring expressions in richly-connected networks.</a> *Equal contribution.</div>
+          <div class="venue"><em>Language Dynamics and Change</em>, 10(2), 259–290.</div>
+        </li>
+  
+        <li>
+          <div><strong>Richie, R.</strong>, White, B., Hout, M.C., &amp; Bhatia, S. (2020). <a href="https://link.springer.com/article/10.3758/s13428-020-01362-y">The spatial arrangement method of measuring similarity can capture high-dimensional, semantic structures.</a></div>
+          <div class="venue"><em>Behavior Research Methods</em>, 52, 1906–1928.</div>
+        </li>
+  
+        <li>
+          <div><strong>Richie, R.</strong>, Zou, W., &amp; Bhatia, S. (2019). <a href="http://doi.org/10.1525/collabra.282">Predicting high-level human judgment across diverse behavioral domains.</a></div>
+          <div class="venue"><em>Collabra: Psychology</em>, 5(1), 50.</div>
+        </li>
+  
+        <li>
+          <div>Bhatia, S., <strong>Richie, R.</strong>, &amp; Zou, W. (2019). <a href="https://www.sas.upenn.edu/~bhatiasu/Bhatia%20et%20al%202019%20COBS.pdf">Distributed semantic representations for modeling human judgment.</a></div>
+          <div class="venue"><em>Current Opinion in Behavioral Sciences</em>, 29, 31–36.</div>
+        </li>
+  
+        <li>
+          <div><strong>Richie, R.</strong> (2016). <a href="https://benjamins.com/#catalog/journals/ml.11.3.05ric/details">Functionalism in the lexicon: Where is it, and how did it get there?</a></div>
+          <div class="venue"><em>The Mental Lexicon</em>, 11(3), 429–466.</div>
+        </li>
+  
+        <li>
+          <div><strong>Richie, R.</strong>, Yang, C., &amp; Coppola, M. (2014). <a href="https://russellrichie.files.wordpress.com/2016/10/richie-yang-coppola-topics-final.docx">Modeling the emergence of natural language lexicons in homesign systems.</a></div>
+          <div class="venue"><em>Topics in Cognitive Science</em>, 6(1), 183–195.</div>
+        </li>
+  
+        <li>
+          <div>Roseberry, S., <strong>Richie, R.</strong>, Hirsh-Pasek, K., Golinkoff, R.M., &amp; Shipley, T. (2011). <a href="https://journals.sagepub.com/doi/full/10.1177/0956797611422074">Babies catch a break: 7- to 9-month-olds track transitional probabilities in continuous dynamic events.</a></div>
+          <div class="venue"><em>Psychological Science</em>, 22(11), 1422–1424.</div>
+        </li>
+  
+      </ul>
+    </details>
   </section>
 
   <section id="writing">
